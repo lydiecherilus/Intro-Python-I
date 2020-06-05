@@ -6,10 +6,10 @@ x = 12
 
 def change_x():
     x = 99
-
+   
 change_x()
 
-# This prints 12. What do we have to modify in change_x() to get it to print 99?
+# This prints 12. What do we have to modify in change_x() to get it to print 99? move print(x) on line 9 just
 print(x)
 
 
@@ -20,11 +20,11 @@ def outer():
 
     def inner():
         y = 999
-
+      
     inner()
 
     # This prints 120. What do we have to change in inner() to get it to print
-    # 999?
+    # 999? move print(y) in line 23
     # Note: Google "python nested function scope".
     print(y)
 
