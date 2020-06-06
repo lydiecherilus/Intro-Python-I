@@ -27,6 +27,6 @@ with open('foo.txt', 'r') as f:
 with open('bar.txt', 'w') as nf:
     text = '''test contain\n2nd test contain\nI like python'''
     nf.write(text)
-    f.closed
+    nf.closed
 True
 print(text)

@@ -29,7 +29,7 @@ print(y)
 a = ["foo", "bar", "baz"]
 
 y = []
-y = [name.capitalize() for name in a]
+y = [name.upper() for name in a]
 print(y)
 
 
