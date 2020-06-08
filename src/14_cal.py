@@ -35,14 +35,24 @@ now = datetime.now()
 month = now.month
 year = now.year
 
+view_calendar = calendar.TextCalendar()
+
+# no argument default the current month and year
 if len(sys.argv) == 1:
-   calendar.prmonth(year, month)
+  view_calendar.prmonth(year, month)
+
+# 1 argument should set the month
 elif len(sys.argv) == 2:
   month = int(sys.argv[1])
-  calendar.prmonth(year, month)
+  view_calendar.prmonth(year, month)
+
+# 2 arguments should set the month and year
 elif len(sys.argv) == 3:
-   month = int(sys.argv[1])
-   year = int(sys.argv[2])
-   calendar.prmonth(year, month)
+  month = int(sys.argv[1])
+  year = int(sys.argv[2])
+  view_calendar.prmonth(year, month)
+
+# Otherwise, print error and usage mesage
 else:
   print('usage: 4_cal.py month [year]')
+  exit(0)
